@@ -1,0 +1,223 @@
+.MainPage {
+    background-color: #c1bfff;
+    min-height: 100vh;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.MovieList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.MovieItem {
+    width: calc(50% - 2rem);
+    margin: 1rem;
+    text-decoration: none;
+    position: relative;
+}
+
+.MovieLink {
+    text-decoration: none;
+}
+
+.MovieItem .MovieItemContent {
+    position: relative;
+}
+
+.MovieItem img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.TitleOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 3.5rem;
+    color: white;
+    opacity: 0.7;
+}
+
+.TitleText {
+    font-weight: bold;
+}
+
+.MovieInfo {
+    position: absolute;
+    bottom: 0.2rem;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+
+.poster {
+    object-fit: cover;
+}
+
+.MovieInfo p {
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 1400px) {
+    .MovieItem {
+        width: calc(70% - 1rem);
+    }
+    .MovieInfo {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .MovieItem {
+        width: calc(70% - 1rem);
+    }
+    .MovieItem img {
+        height: 25rem;
+    }
+    .MovieInfo {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .MovieItem {
+        width: calc(90% - 2rem);
+    }
+    .MovieItem img {
+        height: auto;
+    }
+    .TitleOverlay {
+        font-size: 2.5rem;
+    }
+    .MovieInfo p {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .MovieItem {
+        width: calc(100% - 2rem);
+        margin: 0.5rem;
+    }
+    .MovieItem img {
+        height: auto;
+    }
+    .TitleOverlay {
+        font-size: 2rem;
+    }
+    .MovieInfo p {
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .MovieItem {
+        margin: 0.5rem;
+    }
+    .MovieItem img {
+        height: 15rem;
+    }
+    .TitleOverlay {
+        font-size: 1.5rem;
+    }
+    .MovieInfo p {
+        font-size: 0.5rem;
+        padding: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .MovieItem {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    .MovieItem img {
+        height: auto;
+    }
+    .TitleOverlay {
+        font-size: 2rem;
+    }
+    .MovieInfo p {
+        font-size: 0.7rem;
+        padding: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .MovieItem {
+        margin: 0.5rem;
+    }
+    .MovieItem img {
+        height: 12rem;
+    }
+    .TitleOverlay {
+        font-size: 1.5rem;
+    }
+    .MovieInfo p {
+        font-size: 0.6rem;
+        padding: 0.3rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .MovieItem {
+        margin: 0.5rem;
+    }
+    .MovieItem img {
+        height: 11rem;
+    }
+    .TitleOverlay {
+        font-size: 1.4rem;
+    }
+    .MovieInfo p {
+        font-size: 0.5rem;
+        padding: 0.2rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .MovieItem {
+        margin: 0.5rem;
+    }
+    .MovieItem img {
+        height: 10rem;
+    }
+    .TitleOverlay {
+        font-size: 1.3rem;
+    }
+    .MovieInfo p {
+        font-size: 0.4rem;
+        padding: 0.1rem;
+    }
+}
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+    .MovieItem {
+        width: 100%;
+        margin: 0.5rem ;
+    }
+    .MovieItem img {
+        height: auto;
+    }
+    .TitleOverlay {
+        font-size: 1.8rem;
+    }
+    .MovieInfo p {
+        font-size: 0.6rem;
+        padding: 0.3rem;
+    }
+}
+
+/* Adjustments for Galaxy S8+ */

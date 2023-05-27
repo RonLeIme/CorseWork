@@ -1,0 +1,197 @@
+
+.container {
+    background-color: #c1bfff;
+    padding-top: 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ItemContent {
+    margin: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ItemContent img{
+    width: 70%;
+    border-radius: 1rem;
+}
+
+.Overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 3.5rem;
+    color: white;
+    opacity: 0.7;
+}
+
+.TitleText {
+    font-weight: bold;
+}
+
+.Info {
+    display: flex;
+    align-items: center;
+    width: 68%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    bottom: 0.8rem;
+}
+
+.Info p {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 0;
+    padding: 1rem;
+}
+
+.seats-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seats p {
+    margin-bottom: 5px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.seats p {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: #5e1eff;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+
+
+.seats button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.seats button.selected {
+    background-color: #5e1eff; /* Измените цвет фона на ваш выбранный */
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+    font-weight: bold;
+}
+
+
+.seats button.disabled {
+    background-color: aqua; /* Измените цвет фона на ваш выбранный */
+    color: black;
+    font-weight: bold;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+}
+
+
+.BuyButton{
+    background-color: aqua;
+    font-weight: bold;
+    width: 7rem;
+    height: 3rem;
+    border-radius: 2rem;
+    margin-bottom: 4rem;
+    border: none;
+}
+
+@media screen and (max-width: 850px) {
+    .ItemContent img{
+        width: 85%;
+    }
+
+    .Overlay {
+        font-size: 2.5rem
+    }
+
+    .Info {
+        width: 82%;
+    }
+
+    .Info p{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .ItemContent img{
+        width: 90%;
+    }
+
+    .Info {
+        width: 87%;
+    }
+
+    .Overlay {
+        font-size: 2rem
+    }
+
+    .Info p{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding-top: 1rem;
+    }
+
+    .ItemContent img {
+        width: 100%;
+    }
+
+    .Overlay {
+        font-size: 2rem;
+    }
+
+    .Info {
+        width: 90%;
+    }
+
+    .Info p {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+    }
+
+    .BuyButton {
+        margin-bottom: 2rem;
+    }
+
+    .seats p {
+        font-size: 0.8rem;
+    }
+
+}

@@ -1,0 +1,62 @@
+.RegStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+}
+
+
+
+.LogStyle {
+    margin-left: 1vh;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ColorLink {
+    color: black;
+    text-decoration: none;
+}
+
+.RegStyle input {
+    border-radius: 3vh;
+    padding: 2vh;
+    margin: 1vh;
+    background-color: #c1bfff;
+}
+
+.RegStyle input::placeholder {
+    color: black;
+}
+
+.RegStyle button {
+    border-radius: 3vh;
+    padding: 1vh;
+    background-color: #c1bfff;
+    color: black;
+}
+
+.Default {
+    width: 100%;
+    height: 100vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A4A1FF;
+}
+
+.RegFunction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+}
+
+.Message {
+    color: #4d0088;
+    font-weight: bold;
+}
