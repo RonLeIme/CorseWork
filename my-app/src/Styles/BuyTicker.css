@@ -126,6 +126,12 @@
     border-radius: 2rem;
     margin-bottom: 4rem;
     border: none;
+    transition: all 0.3s ease-in-out;
+}
+.BuyButton:hover{
+    background-color: #5e1eff;
+    color: white;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 850px) {
