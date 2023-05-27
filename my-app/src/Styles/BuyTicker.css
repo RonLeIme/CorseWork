@@ -65,18 +65,19 @@
 
 .seats {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.SeatsInfo {
+    display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0.5rem;
 }
 
-.seats p {
-    margin-bottom: 5px;
-    font-weight: bold;
-    justify-content: space-between;
-}
-
-.seats p {
-    margin-bottom: 5px;
+.SeatsInfo p {
     font-weight: bold;
     font-size: 1.2rem;
     text-align: center;
@@ -84,6 +85,13 @@
     background-color: #5e1eff;
     color: white;
     border-radius: 0.5rem;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.ButtonSeat {
+    display: flex;
+    justify-content: center;
 }
 
 

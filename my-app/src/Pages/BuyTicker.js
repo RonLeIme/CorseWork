@@ -1,13 +1,14 @@
-import React, {useEffect, useState} from "react";
-import {useNavigate, useParams} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import * as api from "../api/Api";
 import "../Styles/BuyTicker.css";
 
 function Tickets() {
-    const {id} = useParams();
+    const { id } = useParams();
     const [data, setData] = useState(null);
     let selected = 0;
     const navigator = useNavigate();
+    const [isBuyButtonVisible, setIsBuyButtonVisible] = useState(true);
 
     useEffect(() => {
         api
@@ -16,6 +17,10 @@ function Tickets() {
             .then((data) => {
                 let movie = data["schedule"].find((item) => item.id === parseInt(id));
                 setData(movie);
+
+                if (movie && movie.seats.length === 0) {
+                    setIsBuyButtonVisible(false);
+                }
             })
             .catch((error) => {
                 console.error("Error fetching schedule:", error);
@@ -49,63 +54,81 @@ function Tickets() {
 
     const handleBuyClick = () => {
         // Get user name and token from cookies
-        const Cookies = require('js-cookie');
-        const username = Cookies.get('username');
-        const token = Cookies.get('token');
+        const Cookies = require("js-cookie");
+        const username = Cookies.get("username");
+        const token = Cookies.get("token");
 
         if (username === undefined || token === undefined) {
-            navigator('/login'); // navigate to the login page
+            navigator("/login"); // navigate to the login page
         }
-        api.buy_ticket(username, token, id, selected)
+
+        api
+            .buy_ticket(username, token, id, selected)
             .then((response) => {
                 if (response.ok) {
                     response.json().then((data) => {
                         console.log(data);
-                        navigator('/profile'); // navigate to the profile page
+                        navigator("/profile"); // navigate to the profile page
                     });
                 } else {
-                    navigator('/login'); // navigate to the login page
+                    navigator("/login"); // navigate to the login page
                 }
             });
     };
-
 
     return (
         <>
             {data ? (
                 <div className="container">
                     <div className="ItemContent">
-                        <img src={data.img} alt={data.title}/>
+                        <img src={data.img} alt={data.title} />
                         <div className="Overlay">
                             <div className="TitleText">{data.title}</div>
                         </div>
                     </div>
                     <div className="Info">
-                        <p>Дата: {data.date}<br/>Час: {data.time}<br/>Ціна: {data.price} грн <br/>Рейтинг: {data.imdb_rating} </p>
+                        <p>
+                            Дата: {data.date}
+                            <br />
+                            Час: {data.time}
+                            <br />
+                            Ціна: {data.price} грн <br />
+                            Рейтинг: {data.imdb_rating}
+                        </p>
                     </div>
                     <div className="seats">
-                        <p className="seats">Вільні місця</p>
-                    </div>
-                    <div className="seats">
-                        {data.seats.map((seat) => (
-                            <button
-                                key={seat}
-                                id={seat}
-                                onClick={() => handleSeatClick(seat)}
-                                className={selected === seat ? "selected" : "disabled"}
-                            >
-                                {seat}
-                            </button>
-                        ))}
-                    </div>
-                    <div>
-                        <button
-                            className="BuyButton"
-                            onClick={() => handleBuyClick()}
-                        >Купити
-                        </button>
-                    </div>
+                        {data.seats.length > 0 ? (
+                            <>
+                                <div className="SeatsInfo">
+                                    <p>Вільні місця</p>
+                                </div>
+                                <div className="ButtonSeat">
+                                    {data.seats.map((seat) => (
+                                    <button
+                                        key={seat}
+                                        id={seat}
+                                        onClick={() => handleSeatClick(seat)}
+                                        className={selected === seat ? "selected" : "disabled"}
+                                    >
+                                        {seat}
+                                    </button>
+                                ))}
+                                </div>
 
+                            </>
+                        ) : (
+                            <div className="SeatsInfo">
+                                <p>Немає вільних місць</p>
+                            </div>
+                        )}
+                    </div>
+                    {isBuyButtonVisible && (
+                        <div>
+                            <button className="BuyButton" onClick={handleBuyClick}>
+                                Купити
+                            </button>
+                        </div>
+                    )}
                 </div>
             ) : (
                 <div>Загрузка...</div>
