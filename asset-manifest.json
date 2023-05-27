@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/CorseWork/static/css/main.015148ba.css",
-    "main.js": "/CorseWork/static/js/main.3b7fa3e2.js",
+    "main.css": "/CorseWork/static/css/main.feef356d.css",
+    "main.js": "/CorseWork/static/js/main.f0d6a0d7.js",
     "static/js/787.28cb0dcd.chunk.js": "/CorseWork/static/js/787.28cb0dcd.chunk.js",
     "index.html": "/CorseWork/index.html",
-    "main.015148ba.css.map": "/CorseWork/static/css/main.015148ba.css.map",
-    "main.3b7fa3e2.js.map": "/CorseWork/static/js/main.3b7fa3e2.js.map",
+    "main.feef356d.css.map": "/CorseWork/static/css/main.feef356d.css.map",
+    "main.f0d6a0d7.js.map": "/CorseWork/static/js/main.f0d6a0d7.js.map",
     "787.28cb0dcd.chunk.js.map": "/CorseWork/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.015148ba.css",
-    "static/js/main.3b7fa3e2.js"
+    "static/css/main.feef356d.css",
+    "static/js/main.f0d6a0d7.js"
   ]
 }
