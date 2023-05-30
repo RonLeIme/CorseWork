@@ -64,10 +64,7 @@
 }
 
 .seats {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1rem;
+
 }
 
 .SeatsInfo {
@@ -92,6 +89,9 @@
 .ButtonSeat {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 1rem;
 }
 
 

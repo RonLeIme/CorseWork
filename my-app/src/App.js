@@ -11,6 +11,7 @@ import * as api from "./api/Api";
 
 
 function App() {
+    document.title = "Кінотеатр";
     const [loggedIn, setLoggedIn] = useState(false);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -64,6 +65,15 @@ function App() {
 
     const register = () => {
         document.getElementById("Message").innerHTML = "";
+        //check if username is email
+        if (!username.includes("@")) {
+            document.getElementById("Message").innerHTML = "Username must be an email";
+            return;
+        }
+        if(password.length < 8){
+            document.getElementById("Message").innerHTML = "Password must be at least 8 characters";
+            return;
+        }
         setIsLoading(true);
         api.register(username, password)
             .then((response) => {
