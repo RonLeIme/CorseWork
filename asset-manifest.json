@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.be47e7ad.css",
-    "main.js": "/react-gh-pages/static/js/main.a434df6b.js",
-    "static/js/787.28cb0dcd.chunk.js": "/react-gh-pages/static/js/787.28cb0dcd.chunk.js",
-    "index.html": "/react-gh-pages/index.html",
-    "main.be47e7ad.css.map": "/react-gh-pages/static/css/main.be47e7ad.css.map",
-    "main.a434df6b.js.map": "/react-gh-pages/static/js/main.a434df6b.js.map",
-    "787.28cb0dcd.chunk.js.map": "/react-gh-pages/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/CorseWork/static/css/main.be47e7ad.css",
+    "main.js": "/CorseWork/static/js/main.f06ab729.js",
+    "static/js/787.28cb0dcd.chunk.js": "/CorseWork/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/CorseWork/index.html",
+    "main.be47e7ad.css.map": "/CorseWork/static/css/main.be47e7ad.css.map",
+    "main.f06ab729.js.map": "/CorseWork/static/js/main.f06ab729.js.map",
+    "787.28cb0dcd.chunk.js.map": "/CorseWork/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.be47e7ad.css",
-    "static/js/main.a434df6b.js"
+    "static/js/main.f06ab729.js"
   ]
 }
